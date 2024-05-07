@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <title>js Exam 2</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      header {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1%;
+        background-color: rgba(243, 245, 243, 0.5215686275);
+        box-shadow: 0 0 10px 10px rgba(236, 179, 144, 0.1764705882);
+        z-index: 22;
+      }
+      header .logo i {
+        font-size: 4rem;
+        color: #94b49f;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      header .logo i:hover {
+        color: #cee5d0;
+        transition: 0.3s;
+      }
+      header .basket {
+        margin-right: 4%;
+      }
+      header .basket i {
+        font-size: 1.5rem;
+        color: #ecb390;
+        cursor: pointer;
+      }
+      header .display {
+        position: absolute;
+        top: 70px;
+        left: 1370px;
+        background-color: #ecb390;
+      }
+
+      .container {
+        height: 100vh;
+        width: 90%;
+        background-color: #fcf8e8;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container .products {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 100px;
+      }
+      .container .products .product {
+        width: 300px;
+        height: 250px;
+        margin-top: 2%;
+        background-color: rgba(236, 179, 144, 0.7176470588);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+      .container .products .product .img i {
+        font-size: 4rem;
+        color: #f1faf2;
+      }
+      .container .products .product .title {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: default;
+      }
+      .container .products .product p {
+        color: #545854;
+        cursor: default;
+      }
+      .container .products .product button {
+        background-color: #94b49f;
+        border: 1px solid #7b9985;
+        font-size: 1.3rem;
+        color: white;
+        padding: 2% 6%;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .container .products .product button:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+      }
+      .container .products .product:hover {
+        background-color: #ecb390;
+        transition: 0.3s;
+        box-shadow: 0 0 10px 5px rgba(84, 88, 84, 0.1843137255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result"></div>
+    <div id="result"></div>
+
+    <header>
+      <a class="logo"><i class="fa-brands fa-apple-pay"></i></a>
+      <div class="basket"><i class="fa-solid fa-cart-shopping"></i></div>
+      <span class="display" id="displayy"></span>
+    </header>
+    <section class="container">
+      <div class="products">
+        <div class="product" price="2500">
+          <span class="img"><i class="fa-solid fa-mobile-button"></i></span>
+          <span class="title">mobile</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="7000">
+          <span class="img"><i class="fa-solid fa-laptop"></i></span>
+          <span class="title">laptop</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="10000">
+          <span class="img"><i class="fa-solid fa-computer"></i></span>
+          <span class="title">computer</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="300">
+          <span class="img"><i class="fa-solid fa-computer-mouse"></i></span>
+          <span class="title">computer-mouse</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="2000">
+          <span class="img"><i class="fa-solid fa-tv"></i></span>
+          <span class="title">tv</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="100">
+          <span class="img"><i class="fa-solid fa-keyboard"></i></span>
+          <span class="title">keyboard</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="5000">
+          <span class="img"><i class="fa-solid fa-tablet"></i></span>
+          <span class="title">tablet</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="30000">
+          <span class="img"><i class="fa-solid fa-desktop"></i></span>
+          <span class="title">desktop</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="5000">
+          <span class="img"><i class="fa-solid fa-tablet"></i></span>
+          <span class="title">tablet</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+        <div class="product" price="10000">
+          <span class="img"><i class="fa-solid fa-computer"></i></span>
+          <span class="title">computer</span>
+
+          <button><i class="fa-solid fa-cart-plus"></i></button>
+        </div>
+      </div>
+
+      <div id="content"></div>
+
+      <button id="addToCart" style="display: none">Show Price</button>
+    </section>
+
+    <script>
+      var allProducts = document.querySelectorAll(".products .product");
+      var content = document.querySelector("#content");
+      var btnadd = document.querySelector("#addToCart");
+      var display = document.getElementById("displayy");
+
+      var totalPrice = 0;
+
+      allProducts.forEach(function (item) {
+        item.onclick = function () {
+          totalPrice += parseInt(item.getAttribute("price"));
+          content.innerHTML += item.textContent + " - ";
+
+          if (content.innerHTML != "   ") {
+            btnadd.style.display = "flex";
+          }
+        };
+      });
+      btnadd.onclick = function () {
+        display.innerHTML = " Total price is : " + totalPrice;
+      };
+    </script>
+  </body>
+</html>

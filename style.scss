@@ -1,0 +1,112 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: #f3f5f385;
+  box-shadow: 0 0 10px 10px #ecb3902d;
+  z-index: 22;
+  .logo {
+    i {
+      font-size: 4rem;
+      color: #94b49f;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: #cee5d0;
+        transition: 0.3s;
+      }
+    }
+  }
+  .basket {
+    i {
+      font-size: 1.5rem;
+      color: #ecb390;
+      cursor: pointer;
+    }
+    margin-right: 4%;
+  }
+  .display{
+    position: absolute;
+    top: 70px;
+    left: 1370px;
+
+    background-color: #ecb390;
+
+  }
+}
+.container {
+  height: 100vh;
+  width: 90%;
+
+  background-color: #fcf8e8;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+    .product {
+      width: 300px;
+      height: 250px;
+      margin-top: 2%;
+      background-color: #ecb390b7;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 10px;
+
+      transition: 0.3s;
+      .img {
+        i {
+          font-size: 4rem;
+          color: #f1faf2;
+        }
+      }
+      .title {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: default;
+      }
+      p {
+        color: #545854;
+        cursor: default;
+      }
+      button {
+        background-color: #94b49f;
+        border: 1px solid #7b9985;
+        font-size: 1.3rem;
+        color: white;
+        padding: 2% 6%;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
+        }
+      }
+
+      &:hover {
+        background-color: #ecb390;
+        transition: 0.3s;
+        box-shadow: 0 0 10px 5px  #5458542f;
+      }
+    }
+  }
+}
